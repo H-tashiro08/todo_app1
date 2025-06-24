@@ -10,6 +10,12 @@ https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/
 import os
 import django
 
+from django.core.wsgi import get_wsgi_application
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')
+
+# 追加
+# Django を初期化してコマンドを実行可能にする
 django.setup()
 
 # ---- ここから初期化処理 ----
@@ -35,9 +41,4 @@ except OperationalError as e:
 # ---- 初期化処理ここまで ----
 # 追加終了
 
-from django.core.wsgi import get_wsgi_application
-
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')
-
 application = get_wsgi_application()
-
