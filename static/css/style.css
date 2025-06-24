@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100vh;
+  padding: 50px 250px;
+  background-color: #e8e8e8;
+  color: #333;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.index a {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 9px 15px;
+  background-color: hotpink;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.index a:hover {
+  background-color: #ff19b2;
+}
+
+.index ul {
+  list-style-type: none;
+}
+
+.index li {
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.index li.complete {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.task-title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.task-date {
+  font-size: 14px;
+  color: #666;
+}
+
+.task-description {
+  font-size: 16px;
+}
+
+.add {
+  max-width: 800px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.add form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.add form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.add form input,
+.add form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.add form button {
+  background-color: hotpink;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add .field-error {
+  color: red;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+/* 編集ボタン */
+.edit-btn {
+  background: #ffd700;
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 12px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+.edit-btn:hover {
+  background: #ffe066;
+}
+
+/* 削除ボタン */
+.delete-btn {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 12px 15px;
+  background-color: hsl(0, 100%, 75%);
+  color: #fff;
+  text-decoration: none;
+  border: none;            /* ボタン用 */
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit {
+  max-width: 800px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.edit form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.edit form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.edit form input.form-control,
+.edit form textarea.form-control {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.edit form button {
+  background: hotpink;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 12px;
+  cursor: pointer;
+}
+
+.edit .field-error {
+  color: red;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}

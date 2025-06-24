@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block title %}
+- Add -
+{% endblock %}
+
+{% block contents %}
+<div class="add">
+  <h1>タスク追加ページ</h1>
+
+  <form action="{% url 'add' %}" method="post">
+    {% csrf_token %}
+
+    <div>
+      <label for="{{ form.title.id_for_label }}">タスク名:</label>
+      {{ form.title }}
+      {% if form.title.errors %}
+        {% for error in form.title.errors %}
+          <div class="field-error">{{ error }}</div>
+        {% endfor %}
+      {% endif %}
+    </div>
+
+    <div>
+      <label for="{{ form.description.id_for_label }}">詳細:</label>
+      {{ form.description }}
+      {% if form.description.errors %}
+        {% for error in form.description.errors %}
+          <div class="field-error">{{ error }}</div>
+        {% endfor %}
+      {% endif %}
+    </div>
+
+    <div>
+      <label for="{{ form.start_date.id_for_label }}">開始日:</label>
+      {{ form.start_date }}
+      {% if form.start_date.errors %}
+        {% for error in form.start_date.errors %}
+          <div class="field-error">{{ error }}</div>
+        {% endfor %}
+      {% endif %}
+    </div>
+
+    <div>
+      <label for="{{ form.end_date.id_for_label }}">終了日:</label>
+      {{ form.end_date }}
+      {% if form.end_date.errors %}
+        {% for error in form.end_date.errors %}
+          <div class="field-error">{{ error }}</div>
+        {% endfor %}
+      {% endif %}
+    </div>
+
+    <button type="submit">登録</button>
+  </form>
+
+  <a href="{% url 'index' %}">一覧へ戻る</a>
+</div>
+{% endblock %}

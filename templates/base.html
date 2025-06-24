@@ -1,0 +1,22 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>TodoApp {% block title %}{% endblock %}</title>
+</head>
+<body>
+  {% block header %}
+  {% endblock %}
+
+  <div class="container">
+    {% block contents %}
+    {% endblock %}
+  </div>
+
+  {% block footer %}
+  {% endblock %}
+</body>
+</html>
