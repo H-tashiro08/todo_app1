@@ -49,9 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'bbs.apps.BbsConfig',
-    'django_bootstrap5',
-    'accounts.apps.AccountsConfig',
+    "mytodo",
 ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -144,6 +142,6 @@ LOGIN_REDIRECT_URL = '/bbs/'
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-# SUPERUSER_NAME = env("SUPERUSER_NAME")
-# SUPERUSER_EMAIL = env("SUPERUSER_EMAIL")
-# SUPERUSER_PASSWORD = env("SUPERUSER_PASSWORD")
+SUPERUSER_NAME = env("SUPERUSER_NAME")
+SUPERUSER_EMAIL = env("SUPERUSER_EMAIL")
+SUPERUSER_PASSWORD = env("SUPERUSER_PASSWORD")
